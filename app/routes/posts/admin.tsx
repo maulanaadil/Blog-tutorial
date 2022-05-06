@@ -21,7 +21,10 @@ export default function Admin() {
           <ul>
             {posts.map((post) => (
               <li key={post.content}>
-                <Link to={post.content} className="text-blue-600 underline">
+                <Link
+                  to={`/posts/${post.content}`}
+                  className="text-blue-600 underline"
+                >
                   {post.title}
                 </Link>
               </li>
